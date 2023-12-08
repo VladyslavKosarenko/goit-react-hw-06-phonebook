@@ -3,18 +3,14 @@ import { useState, useEffect } from 'react';
 import { ContactForm } from './ContactForm';
 import { Filter } from './Filter';
 import { ContactList } from './ContactList';
-
 import { useDispatch, useSelector } from 'react-redux';
-import {
-  addContact,
-  removeContact,
-  updateFilter,
-} from '../redux/reducers/contactsSlice';
+import { addContact, removeContact } from '../redux/reducers/contactsSlice';
+import { updateFilter } from '../redux/reducers/filterSlice';
 
 export const PhoneBook = () => {
   const dispatch = useDispatch();
   const contacts = useSelector(state => state.contacts.contacts);
-  const filter = useSelector(state => state.contacts.filter.value);
+  const filter = useSelector(state => state.filter.value);
 
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
