@@ -1,5 +1,5 @@
 import { ContactInput } from './ContactInput';
-
+import React from 'react';
 export const ContactForm = ({
   name,
   number,
