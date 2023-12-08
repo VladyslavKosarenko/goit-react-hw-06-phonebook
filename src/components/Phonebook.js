@@ -40,7 +40,7 @@ export const PhoneBook = () => {
         contact => contact.name.toLowerCase() === name.toLowerCase()
       )
     ) {
-      alert(`${name} вже є в контактах!`);
+      alert(`${name} is already in contacts!`);
       return;
     }
     const newContact = {
